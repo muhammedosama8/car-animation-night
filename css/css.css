@@ -1,0 +1,126 @@
+*{ padding: 0;	margin: 0; box-sizing: border-box }
+
+body{
+	background-image: linear-gradient(135deg, #667eea 0%, #764ba2 120%);
+}
+.height{
+	height: 100vh;
+}
+.page {
+	height: 90%;
+	width: 83vw;
+	margin: 2.5% auto;
+	background-image: linear-gradient(135deg, #667eea 0%, #764ba2 50%);
+	border-radius: 1.5rem;
+	box-shadow: 1px 2px 60px rgba(0,0,0,0.4);
+}
+.container{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+}
+.container .details{
+	width: 95%;
+	text-align: center;
+	padding: 2rem;
+	margin: auto;
+}
+.details h1 {
+	font-family: 'Lexend Deca', sans-serif;
+	font-size: 3.5rem;
+	color: #f0f8ff
+}
+.details p {
+	font-family: 'Muli', sans-serif;
+	color: #ececf0bd;
+	margin: 20px 0
+}
+.button{
+	margin-top: 2rem;
+}
+.button button{
+	background-color: #f0f8ff;
+	font-size: 1rem;
+	padding: 0.8rem 2.3rem;
+	border-radius: 3rem;
+	border:1.2px solid #f0f8ff;
+	cursor: pointer;
+	margin: 0 .5rem;
+}
+.button button:hover{
+	border:1.2px solid #f0f8ff;
+	background: none;
+	color: #f0f8ff
+}
+.night {
+	height: 65vh;
+	width: 50vw;
+	background: url('../img/background.png');
+	background-size: cover;
+	margin: 5rem 2rem;
+	position: relative;
+	box-shadow: 1px 2px 60px rgba(0,0,0,0.4);
+	overflow-x: hidden;
+	border-radius: 6rem
+}
+.surface {
+		height: 140px;
+		width:2000%;
+		display: block;
+		background: url('../img/img_02.png');
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-repeat: repeat-x;
+		animation: moveRight 6s linear infinite;
+}
+@keyframes moveRight{
+	100%{
+		transform:translateX(-2950px);
+		}
+}
+
+.car { 
+	position: absolute;
+	bottom: 8.7%;
+	left: 24% ;
+	animation: suspension 1s linear infinite;
+}
+
+@keyframes suspension{
+	100%{transform:translateY(-1px);}
+	50%{transform:translateY(-2px);}
+	0%{transform:translateY(-1px);}
+}
+/* -----------------------------------------*/
+
+@media (max-width: 992px) {
+	
+.height{
+	height: auto;
+}
+.page {
+	height: auto;
+	width: 90vw;
+}
+.container{
+	display: block;
+	padding: 1rem 0;
+}
+.container .details{
+	width: 95%;
+	text-align: center;
+	padding: 2rem;
+	margin: auto;
+}
+.night{
+	width: 90%;
+    margin: auto;
+	background-size: auto;
+}
+}
+
+@media (max-width: 400px)   {
+	.button button{
+		margin: .5rem;
+	}
+}
